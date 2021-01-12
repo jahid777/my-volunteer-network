@@ -1,0 +1,17 @@
+.search-box{
+    padding: 7px;
+    border: none;
+    font-size: 16px;
+    background-color: whitesmoke;
+    width: 300px;
+    height: 42px;
+ 
+}
+.search-button{
+   border-radius: 0 5px 5px 0;
+   cursor: pointer;
+   position: relative;
+   border: none;
+   margin-bottom: 6.5px;
+   height: 43px;
+}
