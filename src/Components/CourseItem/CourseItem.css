@@ -6,3 +6,6 @@
     font-size: 18px;
     border-radius: 5px;
 }
+.link-design:hover{
+    text-decoration: none;
+}

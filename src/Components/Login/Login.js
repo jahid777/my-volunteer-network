@@ -23,7 +23,7 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
-    let { from } = location.state || { from: { pathname: "/registerForm" } };
+    let { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleSign = () =>{
         var googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -32,7 +32,7 @@ const Login = () => {
       .then((result) => {
      
         const {displayName, email} = result.user;
-        const signedInUser = {name: displayName, email}
+        const signedInUser = {gmailName: displayName, email}
         setLoggedInUser(signedInUser);
         history.replace(from);
          
@@ -58,7 +58,7 @@ const Login = () => {
                 </div>
                 </div>
 
-                <p style={{marginTop:'30px', fontSize:'15px'}}>Don't have an account? <Link>Create an account</Link></p>
+                <p style={{marginTop:'30px', fontSize:'15px'}}>Don't have an account? <Link to="/">Create an account</Link></p>
             </div>
         </div>
     );

@@ -23,16 +23,18 @@ const Header = () => {
           <Link to="/donation" className="nav-link active" aria-current="page" style={{fontSize:'20px'}}>Donation</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/event" style={{fontSize:'20px'}}>Event</Link>
+          <Link className="nav-link active" aria-current="page" to="/eventCard" style={{fontSize:'20px'}}>Event</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/blog" style={{fontSize:'20px'}}>Blog</Link>
         </li>
         <li className="nav-item">
-         {loggedInUser.name ? <h3 style={{fontSize:'20px', marginTop:'11px', color:'blue' }}>{loggedInUser.name}</h3> : <Link className="nav-link active" aria-current="page" to="/login" style={{fontSize:'20px'}}><button className="bg-primary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Register</button></Link>}
+         {loggedInUser.gmailName ? <h3 style={{fontSize:'20px', marginTop:'11px', color:'blue' }}>{loggedInUser.gmailName}</h3> : <Link className="nav-link active" aria-current="page" to="/login" style={{fontSize:'20px'}}><button className="bg-primary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Register</button></Link>}
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/admin" style={{fontSize:'20px'}}><button className="bg-secondary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Admin</button></Link>
+          
+           <Link to="/registrationList" className="nav-link active" aria-current="page" style={{fontSize:'20px'}}><button className="bg-secondary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Admin</button></Link>
+           
         </li>
       </ul>
     </div>
