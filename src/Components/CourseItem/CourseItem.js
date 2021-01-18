@@ -9,6 +9,7 @@ var randomColor = require('randomcolor');
 const CourseItem = (props) => {
     const {pic, name} = props.singleCourse;
     
+    
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
     const [cardData, setCardData] = useContext(UserCardData);
@@ -33,8 +34,6 @@ const CourseItem = (props) => {
        </div>
      </div>
       </Link>
- 
-
      
     );
 };

@@ -1,0 +1,42 @@
+.ship-form{
+    margin: 30px 100px;
+}
+.ship-form input{
+    
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+    /* margin-left: 15px; */
+    margin-right: 20px;
+}
+.error{
+    color: red!important;
+}
+
+.upload-design{
+  
+        display: inline-block;
+        background-color: #d0e5e8;
+        color: blue;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-left: 20px;
+        border: 1px solid blue;
+      
+}
+.upload-img{
+    height: 30px;
+}
+.main-form-box{
+    width: 850px;
+    height: 300px;
+    border: 1px solid lightGray;
+    background-color: lightGray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px;
+}

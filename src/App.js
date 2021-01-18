@@ -12,6 +12,8 @@ import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import RegistrationList from '../src/Components/RegistrationList/RegistrationList';
 import EventCard from './Components/EventCard/EventCard';
+import AddEventForm from './Components/AddEventForm/AddEventForm';
+
 
 
 
@@ -47,6 +49,10 @@ const App = () => {
               <EventCard></EventCard>
           </Route>
 
+          <PrivateRoute  path="/addEventForm">
+              <AddEventForm></AddEventForm>
+          </PrivateRoute>
+
           <PrivateRoute  path="/registrationList">
               <RegistrationList></RegistrationList>
           </PrivateRoute>
@@ -55,6 +61,8 @@ const App = () => {
           <PrivateRoute  path="/registerForm">
               <RegisterForm></RegisterForm>
           </PrivateRoute>
+
+         
 
           <Route  path="*">
               <NotFound></NotFound>

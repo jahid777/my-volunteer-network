@@ -57,12 +57,20 @@ const RegisterForm = () => {
                     <input type="text" name="name" value={loggedInUser.gmailName} placeholder="Full Name" onChange={handleChange} required/> <br/>
                     <input type="text" name="email" value={loggedInUser.email} placeholder="UserName or Email" onChange={handleChange}/>
                     <br/>
-                    <input type="date" name="date" onChange={handleChange}/>
+                    <input type="date" name="date" onChange={handleChange} required/>
                     <br/>
                     <input type="text" name="description"       placeholder="description" onChange={handleChange}/>
                     <br/>
-                    <input type="text" name="organization" placeholder={cardData.name} onChange={handleChange} value={cardData.name}/>
+
+                    {/* <input type="text" name="organization" placeholder={cardData.name} onChange={handleChange} value={cardData.name}/>
+                    <br/> */}
+
+
+                    <input type="text" name="organization" placeholder={cardData.name} onChange={handleChange}/>
                     <br/>
+
+
+
                    
                    <input type="submit" value="Registration"/>
               
