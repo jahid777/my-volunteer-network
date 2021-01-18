@@ -30,9 +30,8 @@ const Login = () => {
         firebase.auth()
       .signInWithPopup(googleProvider)
       .then((result) => {
-     
-        const {displayName, email} = result.user;
-        const signedInUser = {gmailName: displayName, email}
+        const {displayName, email, photoURL} = result.user;
+        const signedInUser = {gmailName: displayName, email, photoURL}
         setLoggedInUser(signedInUser);
         history.replace(from);
          

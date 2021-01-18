@@ -3,7 +3,8 @@
 }
 .ship-form input{
     
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     padding: 5px;
     border: 1px solid gray;
     border-radius: 5px;

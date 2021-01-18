@@ -10,7 +10,7 @@ const AddEventForm = () => {
     const onSubmit = data => {
       // console.log(data)
       //server a creat korte daata from input
-      fetch('http://localhost:7000/addData',{
+      fetch('https://shielded-ocean-92089.herokuapp.com/addData',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ const AddEventForm = () => {
     return (
      <div className="main-form-box">
          <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
-
+             
             <input   name="name" placeholder="enter event"  ref={register} required/>
 
             

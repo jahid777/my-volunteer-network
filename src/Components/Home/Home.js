@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(()=>{
         setCourse(FakeData);
         //server theke uploaded data ansi
-        fetch('http://localhost:7000/homeData')
+        fetch('https://shielded-ocean-92089.herokuapp.com/homeData')
         .then(res => res.json())
         .then(data =>{
            setUploadData(data)

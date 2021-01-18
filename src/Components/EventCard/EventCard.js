@@ -8,7 +8,7 @@ const EventCard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(()=>{
         //card akare server theke data ase show kora
-        fetch('http://localhost:7000/eventsCard?email='+loggedInUser.email)
+        fetch('https://shielded-ocean-92089.herokuapp.com/eventsCard?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data =>{
             setEvents(data)
@@ -19,7 +19,7 @@ const EventCard = () => {
     //cancel korte
     const handleCancel = (id) =>{
         // console.log('deleted',id);
-        fetch(`http://localhost:7000/delete/${id}`,{
+        fetch(`https://shielded-ocean-92089.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

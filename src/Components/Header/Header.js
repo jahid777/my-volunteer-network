@@ -6,6 +6,8 @@ import './Header.css';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
+     console.log(loggedInUser);
     return (
             <div>
              <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -29,7 +31,16 @@ const Header = () => {
           <Link className="nav-link active" aria-current="page" to="/blog" style={{fontSize:'20px'}}>Blog</Link>
         </li>
         <li className="nav-item">
-         {loggedInUser.gmailName ? <h3 style={{fontSize:'20px', marginTop:'11px', color:'blue' }}>{loggedInUser.gmailName}</h3> : <Link className="nav-link active" aria-current="page" to="/login" style={{fontSize:'20px'}}><button className="bg-primary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Register</button></Link>}
+         {
+
+        //  loggedInUser.gmailName ? <h3 style={{fontSize:'20px', marginTop:'11px', color:'blue' }}>
+        //    {loggedInUser.gmailName}</h3> 
+
+         loggedInUser.gmailName ? <button className="bg-primary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px',fontSize:'20px', marginTop:'8px'}} onClick={()=>setLoggedInUser({})}>Sign Out</button>
+
+           : <Link className="nav-link active" aria-current="page" to="/login" style={{fontSize:'20px'}}><button className="bg-primary" style={{color:'white',borderRadius:'5px',border:'none',height:'40px'}}>Register</button></Link>
+           
+           }
         </li>
         <li className="nav-item">
           
@@ -40,8 +51,15 @@ const Header = () => {
     </div>
   </div>
 </nav>
+
      <div style={{textAlign:'center', marginTop: '150px'}}>
-        <h2>I GROW BY HELPING PEOPLE NEED.</h2>
+       {
+         loggedInUser.email ? <h3>WELCOME, <span className="text-primary">{loggedInUser.gmailName} </span> <img className="rounded-circle" style={{height:'50px'}} src={loggedInUser.photoURL} alt=""/>
+          <br/> <br/>  I GROW BY HELPING PEOPLE NEED.</h3>
+         
+         : <h3>I GROW BY HELPING PEOPLE NEED.</h3>
+       }
+      
 
       <form style={{marginTop:'30px'}}>
          <input style={{borderBottom:'none'}} className="search-box"

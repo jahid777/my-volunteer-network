@@ -16,7 +16,7 @@ const RegisterForm = () => {
     
    //database a send mani post korte 
     const handleSubmit = (e) =>{
-        fetch('http://localhost:7000/addBooking',{
+        fetch('https://shielded-ocean-92089.herokuapp.com/addBooking',{
             method: 'POST',
             headers: {
                 'Content-Type':'application/json'
