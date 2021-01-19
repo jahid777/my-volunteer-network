@@ -7,8 +7,9 @@ const EventCard = () => {
     const [events, setEvents] = useState([]); //server ar data
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(()=>{
-        //card akare server theke data ase show kora
+        // card akare server theke data ase show kora
         fetch('https://shielded-ocean-92089.herokuapp.com/eventsCard?email='+loggedInUser.email)
+        // fetch('https://shielded-ocean-92089.herokuapp.com/eventsCard')
         .then(res => res.json())
         .then(data =>{
             setEvents(data)
@@ -43,7 +44,9 @@ const EventCard = () => {
                     <div class="col-md-8" style={{marginTop:'30px'}}>
                     <div class="card-body">
                         <h5 class="card-title">{data.date}</h5>
-                        <p class="card-text">{data.organization}</p>
+                        <p class="card-text">Event: {data.organization}</p>
+                        <p>Description: {data.description}</p>
+                         <p>Name: {loggedInUser.gmailName}</p>
                         <button className="btn btn-primary" 
                         onClick={()=>handleCancel(data._id)}>
                         Cancel</button>

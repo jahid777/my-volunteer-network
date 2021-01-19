@@ -14,7 +14,8 @@ const Registration = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
     useEffect(()=>{
-        fetch('https://shielded-ocean-92089.herokuapp.com/eventsCard?email='+loggedInUser.email)
+        // fetch('https://shielded-ocean-92089.herokuapp.com/eventsCard')
+        fetch('https://shielded-ocean-92089.herokuapp.com/registrationList')
         .then(res => res.json())
         .then(data =>{
             setEvents(data)
